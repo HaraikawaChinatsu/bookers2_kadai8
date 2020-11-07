@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'search/search'
+  # get 'search/search'
   root :to => "homes#top"
   get "home/about" => "homes#about"
 
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
     get 'followers' => 'relationships#followers', as: 'followers'
   end
 
-  get '/search', to: 'search#search'
+  get '/search', to: 'searchs#search'
 
 
 
