@@ -26,6 +26,18 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "password_confirm" %>
   </div>
 
+  <h2>住所</h2>
+  <p>郵便番号</p>
+  <%= f.text_field :postcode %>
+  <p>都道府県</p>
+  <%= f.text_field :prefecture_code, collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県' %><br>
+  <p>市町村</p>
+  <%= f.text_field :address_city %>
+  <p>番地</p>
+  <%= f.text_field :address_street %>
+  <p>建物名</p>
+  <%= f.text_field :address_building %>
+
   <div class="actions">
     <%= f.submit "Sign up" ,class: 'btn btn-success' %>
   </div>

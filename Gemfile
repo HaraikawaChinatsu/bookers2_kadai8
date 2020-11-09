@@ -72,3 +72,9 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+gem 'jquery-rails'
+gem 'jp_prefecture'
+
+# gem 'slim-rails' #slimファイルを使えるようにする
+# gem 'html2slim' #既存のerbファイルをslimファイルに変換出来る様にする
